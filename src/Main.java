@@ -24,7 +24,8 @@ public class Main {
             ballot.setSelectedCandidate(scanner.nextLine());
 
              if (ballot.getNames().contains(ballot.getSelectedCandidate())) {
-                ballot.getCount().set(ballot.getNames().indexOf(ballot.getSelectedCandidate()), ballot.getCount().get(ballot.getNames().indexOf(ballot.getSelectedCandidate())) + 1);
+                ballot.getCount().set(ballot.getNames().indexOf(ballot.getSelectedCandidate()),
+                        ballot.getCount().get(ballot.getNames().indexOf(ballot.getSelectedCandidate())) + 1);
 
                 System.out.println("getNames: " + ballot.getNames()); //remove
                 System.out.println("getCount: " + ballot.getCount()); //remove
@@ -49,9 +50,11 @@ public class Main {
                 }
             }
             if (Collections.max(ballot.getCount()) > 1) {
-                System.out.println("The winner is " + ballot.getNames().get(ballot.getCount().indexOf(Collections.max(ballot.getCount()))) + " with " + Collections.max(ballot.getCount()) + " votes");
+                System.out.println("The winner is " + ballot.getNames().get(ballot.getCount().indexOf(Collections.max(ballot.getCount()))) +
+                        " with " + Collections.max(ballot.getCount()) + " votes");
             } else {
-                System.out.println("The winner is " + ballot.getNames().get(ballot.getCount().indexOf(Collections.max(ballot.getCount()))) + " with " + Collections.max(ballot.getCount()) + " vote");
+                System.out.println("The winner is " + ballot.getNames().get(ballot.getCount().indexOf(Collections.max(ballot.getCount()))) +
+                        " with " + Collections.max(ballot.getCount()) + " vote");
             }
         } else {
             System.out.println("You did not vote.");
