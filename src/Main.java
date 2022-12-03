@@ -27,14 +27,10 @@ public class Main {
                 ballot.getCount().set(ballot.getNames().indexOf(ballot.getSelectedCandidate()),
                         ballot.getCount().get(ballot.getNames().indexOf(ballot.getSelectedCandidate())) + 1);
 
-                System.out.println("getNames: " + ballot.getNames()); //remove
-                System.out.println("getCount: " + ballot.getCount()); //remove
             } else if (!ballot.getSelectedCandidate().equals("-1") && !ballot.getSelectedCandidate().isEmpty()){
                 ballot.getNames().add(ballot.getSelectedCandidate());
                 ballot.getCount().add(1);
 
-                System.out.println("getNames: " + ballot.getNames()); //remove
-                System.out.println("getCount: " + ballot.getCount()); //remove
             } else {
                 ballot.setDone(true);
             }
@@ -59,9 +55,6 @@ public class Main {
         } else {
             System.out.println("You did not vote.");
         }
-
-        System.out.println(ballot.getNames()); //Remove those
-        System.out.println(ballot.getCount()); //Remove those
 
         scanner.close();
     }
