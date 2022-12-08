@@ -24,7 +24,7 @@ public class Main {
             ballot.setSelectedCandidate(scanner.nextLine());
 
              if (ballot.getNames().contains(ballot.getSelectedCandidate())) {
-                ballot.getCount().set(ballot.getNames().indexOf(ballot.getSelectedCandidate()),
+                ballot.getCount().set(ballot.getNames().indexOf(ballot.getSelectedCandidate()),//index of the selected candidate
                         ballot.getCount().get(ballot.getNames().indexOf(ballot.getSelectedCandidate())) + 1);
 
                 System.out.println("getNames: " + ballot.getNames()); //remove
@@ -59,7 +59,6 @@ public class Main {
         } else {
             System.out.println("You did not vote.");
         }
-
         System.out.println(ballot.getNames()); //Remove those
         System.out.println(ballot.getCount()); //Remove those
 
