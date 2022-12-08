@@ -95,12 +95,6 @@ public class Main {
                 System.out.println("You did not vote.");
             }
         }
-<<<<<<< HEAD
-=======
-        //TODO:
-
-
->>>>>>> test
         System.out.println(ballot.getNames()); //Remove those
         System.out.println(ballot.getCount()); //Remove those
 
