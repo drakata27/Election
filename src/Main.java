@@ -1,7 +1,6 @@
 import com.company.utilites.ElectoralVotingBallot;
 
 import java.util.Collections;
-import java.util.HashSet;
 import java.util.Scanner;
 
 public class Main {
@@ -42,16 +41,8 @@ public class Main {
 
         } while (!ballot.isDone());
 
-//        int highestCount = Collections.max(ballot.getCount());
-//        if (ballot.getCount().contains(highestCount)) {
-//
-//        }
-        //TODO:
-        HashSet<Integer> hashSet = new HashSet<>(ballot.getCount());
 
-        if (hashSet.size() < ballot.getCount().size()) {
-            System.out.println("Duplicates");
-            Collections.shuffle(ballot.getCount());
+        if (ballot.getCountHashSet().size() < ballot.getCount().size()) {
             Collections.shuffle(ballot.getNames());
 
             if (!ballot.getNames().isEmpty() || !ballot.getCount().isEmpty()) {
@@ -63,11 +54,11 @@ public class Main {
                     }
                 }
                 if (Collections.max(ballot.getCount()) > 1) {
-                    System.out.println("There were more than one candidate with the same number of votes, so the winner is chosen randomly");
+                    System.out.println("\nIn case there are two or more candidates that have the highest number of votes, the winner will be chosen randomly");
                     System.out.println("The winner is " + ballot.getNames().get(ballot.getCount().indexOf(Collections.max(ballot.getCount()))) +
                             " with " + Collections.max(ballot.getCount()) + " votes");
                 } else {
-                    System.out.println("There were more than one candidate with the same number of votes, so the winner is chosen randomly");
+                    System.out.println("\nIn case there are two or more candidates that have the highest number of votes, the winner will be chosen randomly");
                     System.out.println("The winner is " + ballot.getNames().get(ballot.getCount().indexOf(Collections.max(ballot.getCount()))) +
                             " with " + Collections.max(ballot.getCount()) + " vote");
                 }
@@ -98,6 +89,6 @@ public class Main {
         System.out.println(ballot.getNames()); //Remove those
         System.out.println(ballot.getCount()); //Remove those
 
-        scanner.close();
+        scanner.close(); //Method that closes the scanner object in order to avoid memory leak
     }
 }
