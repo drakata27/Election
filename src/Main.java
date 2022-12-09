@@ -40,18 +40,12 @@ public class Main {
                 ballot.getCount().set(ballot.getNames().indexOf(ballot.getSelectedCandidate()),//Finds the index of the selected candidate
                         ballot.getCount().get(ballot.getNames().indexOf(ballot.getSelectedCandidate())) + 1); //Increases the count of votes by one
 
-                System.out.println("getNames: " + ballot.getNames()); //remove
-                System.out.println("getCount: " + ballot.getCount()); //remove
-
                //Else if statement that will execute if the condition above is not met.
                 //In this case if the user does not type "-1" and they do not provide empty line,
                 // what they type will be stored in the names list and 1 will be stored in the count list, in sense that a new candidate is added
             } else if (!ballot.getSelectedCandidate().equals("-1") && !ballot.getSelectedCandidate().isEmpty()){
                 ballot.getNames().add(ballot.getSelectedCandidate()); //Instance of the ElectoralVotingBallot that calls a getter method to add the candidate name in the names list
                 ballot.getCount().add(1); //Instance of the ElectoralVotingBallot that calls a getter method to add 1 to the count list
-
-                System.out.println("getNames: " + ballot.getNames()); //remove
-                System.out.println("getCount: " + ballot.getCount()); //remove
 
             //Else statement that runs if none of the above conditions is true
             } else {
@@ -113,8 +107,6 @@ public class Main {
                 System.out.println("You did not vote.");
             }
         }
-        System.out.println(ballot.getNames()); //Remove those
-        System.out.println(ballot.getCount()); //Remove those
 
         scanner.close(); //Method that closes the scanner object in order to avoid memory leak
     }
