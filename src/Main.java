@@ -1,7 +1,15 @@
-import com.company.utilites.ElectoralVotingBallot;
+/*
+Name: Aleksandar Drakaliyski
+ID: 21534984
+Program description: This is a voting program developed in Java.
+Users need to enter their candidate choice and the program will find who has the most votes. In case there is a draw,
+the program chooses the winner randomly between the candidates with the most number of votes.
+ */
 
-import java.util.Collections;
-import java.util.Scanner;
+import com.company.utilites.ElectoralVotingBallot;//Imports the ElectoralVotingBallot class from another package
+
+import java.util.Collections; //Imports Collections class
+import java.util.Scanner; //Imports the Scanner class
 
 public class Main {
     public static void main(String[] args) {
